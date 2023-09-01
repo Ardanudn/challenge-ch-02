@@ -4,15 +4,55 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="16dp"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+
+    <RelativeLayout
+        android:id="@+id/group_1"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/hai_ardanu_"
+            android:layout_width="138dp"
+            android:layout_height="38dp"
+
+            android:text="Hai, Ardanu"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/mau_makan_apa_hari_ini_"
+            android:layout_width="178dp"
+            android:layout_height="27dp"
+            android:layout_marginTop="24dp"
+
+            android:text="mau makan apa hari ini ?"
+            android:textSize="14sp" />
+
+        <ImageButton
+            android:id="@+id/vector"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="8dp"
+            android:layout_toStartOf="@+id/vector_ek1"
+            android:background="@drawable/baseline_shopping_cart_24"
+
+            />
+
+        <ImageButton
+            android:id="@+id/vector_ek1"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentEnd="true"
+
+            android:background="@drawable/baseline_account_circle_24" />
+
+    </RelativeLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
