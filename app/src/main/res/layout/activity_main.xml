@@ -36,23 +36,67 @@
 
         <ImageButton
             android:id="@+id/vector"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:layout_marginEnd="8dp"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginEnd="10dp"
             android:layout_toStartOf="@+id/vector_ek1"
-            android:background="@drawable/baseline_shopping_cart_24"
-
-            />
+            android:background="@drawable/baseline_shopping_cart_24" />
 
         <ImageButton
             android:id="@+id/vector_ek1"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
             android:layout_alignParentEnd="true"
 
             android:background="@drawable/baseline_account_circle_24" />
 
     </RelativeLayout>
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/group_1">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/banner_discount" />
+
+        <ImageView
+            android:id="@+id/diskon_img"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:src="@drawable/ic_diskon" />
+
+        <TextView
+            android:id="@+id/diskon_30_"
+            android:layout_width="129dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@+id/diskon_img"
+            android:text="Diskon 30%"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/diskon_detail"
+            android:layout_width="199dp"
+            android:layout_height="38dp"
+            android:layout_below="@id/diskon_30_"
+            android:layout_toRightOf="@+id/diskon_img"
+            android:layout_marginLeft="16dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            android:text="pesan makanan lewat aplikasi dan dapatkan diskonmu"/>
+    </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
