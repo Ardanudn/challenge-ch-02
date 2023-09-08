@@ -1,132 +1,136 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
+    android:scrollIndicators="none"
     tools:context=".MainActivity">
 
 
-    <RelativeLayout
-        android:id="@+id/group_1"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:padding="16dp">
+
 
         <TextView
             android:id="@+id/hai_ardanu_"
-            android:layout_width="138dp"
-            android:layout_height="38dp"
-
-            android:text="Hai, Ardanu"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/string_hai_ardanu"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/mau_makan_apa_hari_ini_"
-            android:layout_width="178dp"
-            android:layout_height="27dp"
-            android:layout_marginTop="24dp"
-            android:text="mau makan apa hari ini ?"
-            android:textSize="14sp" />
+            android:id="@+id/mau_makan_apa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/string_mau_makan_apa"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hai_ardanu_" />
 
         <ImageButton
-            android:id="@+id/vector"
+            android:id="@+id/cart"
             android:layout_width="36dp"
             android:layout_height="36dp"
-            android:layout_marginEnd="10dp"
-            android:layout_toStartOf="@+id/vector_ek1"
-            android:background="@drawable/baseline_shopping_cart_24" />
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/baseline_shopping_cart_24"
+            app:layout_constraintBottom_toBottomOf="@+id/hai_ardanu_"
+            app:layout_constraintEnd_toStartOf="@+id/profile"
+            app:layout_constraintTop_toTopOf="@+id/hai_ardanu_" />
 
         <ImageButton
-            android:id="@+id/vector_ek1"
+            android:id="@+id/profile"
             android:layout_width="36dp"
             android:layout_height="36dp"
             android:layout_alignParentEnd="true"
 
-            android:background="@drawable/baseline_account_circle_24" />
+            android:background="@drawable/baseline_account_circle_24"
+            app:layout_constraintBottom_toBottomOf="@+id/cart"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/cart" />
 
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/bannerdiskon"
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/group_1">
 
         <ImageView
+            android:id="@+id/imageView"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="130dp"
+            android:layout_marginTop="24dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/banner_discount" />
+            android:src="@drawable/banner_discount"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mau_makan_apa" />
 
         <ImageView
             android:id="@+id/diskon_img"
-            android:layout_width="64dp"
-            android:layout_height="64dp"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="16dp"
-            android:src="@drawable/ic_diskon" />
+            android:layout_marginStart="36dp"
+            android:src="@drawable/ic_diskon"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView"
+            app:layout_constraintStart_toStartOf="@+id/imageView"
+            app:layout_constraintTop_toTopOf="@+id/imageView" />
 
         <TextView
             android:id="@+id/diskon_30_"
             android:layout_width="129dp"
             android:layout_height="35dp"
-            android:layout_marginTop="32dp"
-            android:layout_marginLeft="16dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="28dp"
             android:layout_toRightOf="@+id/diskon_img"
-            android:text="Diskon 30%"
+            android:text="@string/string_diskon_30"
             android:textColor="@color/white"
             android:textSize="18sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/diskon_img"
+            app:layout_constraintTop_toTopOf="@+id/imageView" />
 
         <TextView
             android:id="@+id/diskon_detail"
             android:layout_width="199dp"
             android:layout_height="38dp"
             android:layout_below="@id/diskon_30_"
+            android:layout_marginStart="24dp"
             android:layout_toRightOf="@+id/diskon_img"
-            android:layout_marginLeft="16dp"
+            android:text="@string/string_pesan_makanan"
             android:textColor="@color/white"
-            android:textStyle="bold"
             android:textSize="12sp"
-            android:text="pesan makanan lewat aplikasi dan dapatkan diskonmu"/>
-    </RelativeLayout>
-    
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_marginTop="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bannerdiskon">
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/diskon_img"
+            app:layout_constraintTop_toBottomOf="@+id/diskon_30_" />
 
 
         <LinearLayout
-            android:id="@+id/menu_nasi"
+            android:id="@+id/menu_ayam"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
             android:layout_alignParentStart="true"
-            >
-            <ImageView android:id="@+id/img_nasi"
-                android:src="@drawable/nasi"
-                android:layout_width="60dp"
-                android:layout_height="63dp" />
+            android:layout_marginTop="24dp"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView">
+
+            <ImageView
+                android:id="@+id/img_nasi"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ayam" />
 
             <TextView
                 android:id="@+id/nasi"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="9dp"
                 android:layout_gravity="center|bottom"
-                android:text="Nasi"
+                android:layout_marginTop="9dp"
+                android:text="@string/text_ayam"
                 android:textSize="15sp" />
         </LinearLayout>
 
@@ -134,22 +138,26 @@
             android:id="@+id/menu_mie"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/menu_ayam"
+            android:layout_marginLeft="40dp"
             android:orientation="vertical"
-            android:layout_toRightOf="@id/menu_nasi"
-            android:layout_marginHorizontal="46dp"
-            >
-            <ImageView android:id="@+id/img_mie"
-                android:src="@drawable/mie"
-                android:layout_width="60dp"
-                android:layout_height="63dp" />
+            app:layout_constraintBottom_toBottomOf="@+id/menu_ayam"
+            app:layout_constraintStart_toEndOf="@+id/menu_ayam">
+
+            <ImageView
+                android:id="@+id/img_mie"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/miee" />
 
             <TextView
                 android:id="@+id/mie"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="9dp"
                 android:layout_gravity="center|bottom"
-                android:text="Mie"
+                android:layout_marginTop="9dp"
+                android:text="@string/text_mie"
                 android:textSize="15sp" />
         </LinearLayout>
 
@@ -157,21 +165,26 @@
             android:id="@+id/menu_snack"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/menu_mie"
             android:orientation="vertical"
-            android:layout_toRightOf="@id/menu_mie"
-            >
-            <ImageView android:id="@+id/img_snack"
-                android:src="@drawable/snack"
-                android:layout_width="60dp"
-                android:layout_height="63dp" />
+            app:layout_constraintBottom_toBottomOf="@+id/menu_minuman"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/menu_minuman">
+
+            <ImageView
+                android:id="@+id/img_snack"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/snacks" />
 
             <TextView
                 android:id="@+id/snack"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="9dp"
                 android:layout_gravity="center|bottom"
-                android:text="Snack"
+                android:layout_marginTop="9dp"
+                android:text="@string/text_snack"
                 android:textSize="15sp" />
         </LinearLayout>
 
@@ -179,24 +192,66 @@
             android:id="@+id/menu_minuman"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
             android:layout_alignParentEnd="true"
-            >
-            <ImageView android:id="@+id/img_minuman"
-                android:src="@drawable/minuman"
-                android:layout_width="60dp"
-                android:layout_height="63dp" />
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="@+id/menu_mie"
+            app:layout_constraintEnd_toStartOf="@+id/menu_snack"
+            app:layout_constraintStart_toEndOf="@+id/menu_mie"
+            app:layout_constraintTop_toTopOf="@+id/menu_mie">
+
+            <ImageView
+                android:id="@+id/img_minuman"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/milk" />
 
             <TextView
                 android:id="@+id/minuman"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="9dp"
                 android:layout_gravity="center|bottom"
-                android:text="Minuman"
+                android:layout_marginTop="9dp"
+                android:text="@string/text_minuman"
                 android:textSize="15sp" />
         </LinearLayout>
 
-    </RelativeLayout>
+        <TextView
+            android:id="@+id/list_menu_makanan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="24dp"
+            android:text="@string/text_list_menu_makanan"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/menu_ayam" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <ImageButton
+            android:id="@+id/list"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/baseline_format_list_bulleted_24"
+            app:layout_constraintBottom_toBottomOf="@+id/list_menu_makanan"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/list_menu_makanan" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/list_menu_makanan"
+            app:spanCount="2"
+            tools:listitem="@layout/menu_item" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
