@@ -38,7 +38,7 @@
             android:id="@+id/cart"
             android:layout_width="48dp"
             android:layout_height="48dp"
-            android:src="@drawable/baseline_shopping_cart_24"
+            android:src="@drawable/ic_cart"
             android:background="@android:color/transparent"
             app:layout_constraintBottom_toBottomOf="@+id/hai_ardanu_"
             app:layout_constraintEnd_toStartOf="@+id/profile"
@@ -50,7 +50,7 @@
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:layout_alignParentEnd="true"
-            android:src="@drawable/baseline_account_circle_24"
+            android:src="@drawable/ic_profile"
             android:background="@android:color/transparent"
             app:layout_constraintBottom_toBottomOf="@+id/cart"
             app:layout_constraintEnd_toEndOf="parent"
@@ -123,7 +123,7 @@
 
             <ImageView
                 android:id="@+id/img_nasi"
-                android:layout_width="72dp"
+                android:layout_width="76dp"
                 android:layout_height="72dp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/ayam" />
@@ -166,6 +166,33 @@
                 android:text="@string/text_mie"
                 android:textSize="15sp" />
         </LinearLayout>
+        <LinearLayout
+            android:id="@+id/menu_minuman"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginHorizontal="12dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toStartOf="@+id/menu_snack"
+            app:layout_constraintStart_toEndOf="@+id/menu_mie"
+            app:layout_constraintTop_toBottomOf="@+id/imageView">
+
+            <ImageView
+                android:id="@+id/img_minuman"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/milk" />
+
+            <TextView
+                android:id="@+id/minuman"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|bottom"
+                android:layout_marginTop="9dp"
+                android:text="@string/text_minuman"
+                android:textSize="15sp" />
+        </LinearLayout>
 
         <LinearLayout
             android:id="@+id/menu_snack"
@@ -196,33 +223,7 @@
                 android:textSize="15sp" />
         </LinearLayout>
 
-        <LinearLayout
-            android:id="@+id/menu_minuman"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:layout_marginHorizontal="12dp"
-            android:orientation="vertical"
-            app:layout_constraintEnd_toStartOf="@+id/menu_snack"
-            app:layout_constraintStart_toEndOf="@+id/menu_mie"
-            app:layout_constraintTop_toBottomOf="@+id/imageView">
 
-            <ImageView
-                android:id="@+id/img_minuman"
-                android:layout_width="72dp"
-                android:layout_height="72dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/milk" />
-
-            <TextView
-                android:id="@+id/minuman"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center|bottom"
-                android:layout_marginTop="9dp"
-                android:text="@string/text_minuman"
-                android:textSize="15sp" />
-        </LinearLayout>
 
         <TextView
             android:id="@+id/list_menu_makanan"
@@ -243,7 +244,7 @@
             android:layout_height="48dp"
             android:layout_alignParentEnd="true"
             android:background="@android:color/transparent"
-            android:src="@drawable/baseline_format_list_bulleted_24"
+            android:src="@drawable/ic_grid"
             app:layout_constraintBottom_toBottomOf="@+id/list_menu_makanan"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/list_menu_makanan"
